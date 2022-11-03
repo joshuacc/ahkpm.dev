@@ -1,25 +1,19 @@
 [[docs]]
   name = "Overview"
-  weight = 10
+  weight = 0
   identifier = "overview"
   url = "/docs/overview/"
-
-[[docs]]
-  name = "Help"
-  weight = 60
-  identifier = "help"
-  url = "/docs/help/"
-
-# [[docs]]
-#   name = "Lorem"
-#   weight = 70
-#   identifier = "lorem"
-#   url = "/docs/lorem/"
 
 [[main]]
   name = "Docs"
   url = "/docs/overview/introduction/"
   weight = 10
+
+[[docs]]
+  name = "Advanced"
+  weight = 10
+  identifier = "advanced"
+  url = "/docs/advanced/"
 
 # [[main]]
 #   name = "Blog"

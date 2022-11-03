@@ -1,7 +1,11 @@
 ---
 title: "Introduction"
-description: "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
-lead: "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
+description: "An introduction to using ahkpm"
+lead: >
+  AutoHotkey is a powerful tool for scripting automations on Windows, but
+  manually managing dependencies for your scripts is painful.
+  ahkpm brings modern package management to AutoHotkey,
+  making it easier than ever to automate away the drudgery.
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
@@ -13,46 +17,41 @@ weight: 100
 toc: true
 ---
 
-## Get started
+## Installation
 
-There are two main ways to get started with Doks:
+To install ahkpm:
 
-### Tutorial
+1. Go to the [releases][releases] page and find the most recent version.
+2. Download the `ahkpm-{version}.msi` file.
+3. Open it on your Windows machine to launch the ahkpm installer.
 
-{{< alert icon="👉" text="The Tutorial is intended for novice to intermediate users." />}}
+## Basic usage
 
-Step-by-step instructions on how to start a new Doks project. [Tutorial →](https://getdoks.org/tutorial/introduction/)
+1. Open the command line and navigate to the directory which will contain your AutoHotKey script.
+2. Run `ahkpm init` and answer the prompts to create an `ahkpm.json` file
+3. Run `ahkpm install <package>@<version>`
+   - The package can be any github repository in the form: `github.com/user/repo`
+   - The version can be any of the following:
+     - A valid [semantic version][semver] such as `1.0.0`
+     - The prefix `tag:` followed by the name of a tag in the package's repository, such as `tag:beta2`
+     - The prefix `branch:` followed by the name of a branch in the package's repository, such as `branch:main`
+     - The prefix `commit:` followed by the hash of a commit in the package's repository, such as `commit:badcce14f8e828cda4d8ac404a12448700de1441`
+     - Omitting the version is not yet supported
+4. Add `#Include, %A_ScriptDir%` to the top of your script to set the current directory as the context for subsequent includes
+5. Add `#Include, ahkpm-modules\github.com\user\repo\main-file.ahk` to your script
+6. You can now use the package's functionality within your AutoHotKey script!
 
-### Quick Start
+## Current limitations
 
-{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." />}}
+ahkpm is being actively developed, but it is still a young project.
+As a result it has the following limitations.
 
-One page summary of how to start a new Doks project. [Quick Start →]({{< relref "quick-start" >}})
+- It only supports hosting and downloading of packages on GitHub, though other git hosts will be supported in the future.
+- It doesn't (yet) support specifying version ranges as you can in npm and other package managers.
+- The lockfile only guides installations [when top-level dependencies haven't changed](https://github.com/joshuacc/ahkpm/issues/75).
 
-## Go further
+If you'd like to help remedy these limitations, consider [contributing][github]!
 
-Recipes, Reference Guides, Extensions, and Showcase.
-
-### Recipes
-
-Get instructions on how to accomplish common tasks with Doks. [Recipes →](https://getdoks.org/docs/recipes/project-configuration/)
-
-### Reference Guides
-
-Learn how to customize Doks to fully make it your own. [Reference Guides →](https://getdoks.org/docs/reference-guides/security/)
-
-### Extensions
-
-Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/breadcrumb-navigation/)
-
-### Showcase
-
-See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/electric-blocks/)
-
-## Contributing
-
-Find out how to contribute to Doks. [Contributing →](https://getdoks.org/docs/contributing/how-to-contribute/)
-
-## Help
-
-Get help on Doks. [Help →]({{< relref "how-to-update" >}})
+[semver]:https://semver.org/
+[releases]:https://github.com/joshuacc/ahkpm/releases
+[github]:https://github.com/joshuacc/
