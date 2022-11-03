@@ -1,5 +1,6 @@
 ---
 title: "ahkpm.json & ahkpm.lock"
+description: "Details about the two files ahkpm uses to keep track of your dependencies"
 lead:
   ahkpm uses two files to keep track of the packages you use, ahkpm.json for
   specifying your direct dependencies, and ahkpm.lock to ensure that you always

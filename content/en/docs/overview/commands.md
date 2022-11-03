@@ -1,5 +1,6 @@
 ---
 title: "Commands"
+description: "Details about the commands that ahkpm supports"
 lead: "ahkpm supports the following commands"
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
