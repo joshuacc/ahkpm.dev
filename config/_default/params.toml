@@ -83,7 +83,7 @@ repoHost = "GitHub"
 docsRepo = "https://github.com/joshuacc/ahkpm.dev"
 docsRepoBranch = "main"
 docsRepoSubPath = ""
-editPage = false
+editPage = true
 lastMod = false
 
 [sections]
