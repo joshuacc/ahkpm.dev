@@ -1,23 +1,19 @@
 ---
 title: ahkpm cache clean
-lead: "Clears the package cache"
+description: Clears the package cache
+lead: Clears the package cache
 menu:
   docs:
     parent: "commands"
 toc: true
 ---
+## Synopsis
 
+Clears the package cache, removing all downloaded packages. Sometimes useful in troubleshooting.
+
+## Usage
+
+```text
+ahkpm cache clean
 ```
-ahkpm cache clean [flags]
-```
-
-## Options
-
-```
-  -h, --help   help for clean
-```
-
-## See also:
-
-* [ahkpm cache](ahkpm_cache.md)	 - Manipulates the packages cache
 

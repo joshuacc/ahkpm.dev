@@ -1,29 +1,34 @@
 ---
 title: ahkpm
-lead: "The package manager for AutoHotkey"
+description: The root command for the ahkpm CLI
+lead: The root command for the ahkpm CLI
 menu:
   docs:
     parent: "commands"
 toc: true
 ---
+## Synopsis
 
-```
+ahkpm is a package manager for AutoHotkey. This root command provides access
+to all of the subcommands which install, update, and manage your AutoHotkey
+packages.
+
+## Usage
+
+```text
+ahkpm [command]
 ahkpm [flags]
 ```
 
+## Available subcommands
+
+- `cache`: Manipulates the packages cache
+- `init`: Interactively create an ahkpm.json file in the current directory
+- `install`: Installs specified package(s). If none, reinstalls all packages in ahkpm.json.
+- `list`: List all installed packages and their versions
+- `update`: Update package(s) to the latest version allowed by ahkpm.json
+- `version`: Bumps the version in `ahkpm.json`.
+
 ## Options
 
-```
-  -h, --help      help for ahkpm
-  -v, --version   Display the version of ahkpm and AutoHotkey
-```
-
-## See also:
-
-* [ahkpm cache](ahkpm_cache.md)	 - Manipulates the packages cache
-* [ahkpm init](ahkpm_init.md)	 - Interactively create an ahkpm.json file in the current directory
-* [ahkpm install](ahkpm_install.md)	 - Installs specified package(s). If none, reinstalls all packages in ahkpm.json.
-* [ahkpm list](ahkpm_list.md)	 - List all installed packages and their versions
-* [ahkpm update](ahkpm_update.md)	 - Update package(s) to the latest version allowed by ahkpm.json
-* [ahkpm version](ahkpm_version.md)	 - Bumps the version in ahkpm.json.
-
+- `--version`, `-v`: Display the version of ahkpm and AutoHotkey

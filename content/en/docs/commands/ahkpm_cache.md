@@ -1,19 +1,24 @@
 ---
 title: ahkpm cache
-lead: "Manipulates the packages cache"
+description: Manipulates the packages cache
+lead: Manipulates the packages cache
 menu:
   docs:
     parent: "commands"
 toc: true
 ---
-## Options
+## Synopsis
 
+Provides subcommands to manipulate the packages cache. The cache is a directory where packages are downloaded and stored for later use.
+
+## Usage
+
+```text
+ahkpm cache [command]
+ahkpm cache
 ```
-  -h, --help   help for cache
-```
 
-## See also:
+## Available subcommands
 
-* [ahkpm](ahkpm.md)	 - The package manager for AutoHotkey
-* [ahkpm cache clean](ahkpm_cache_clean.md)	 - Clears the package cache
+- `clean`: Clears the package cache
 

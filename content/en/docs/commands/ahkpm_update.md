@@ -1,6 +1,7 @@
 ---
 title: ahkpm update
-lead: "Update package(s) to the latest version allowed by ahkpm.json"
+description: Update package(s) to the latest version allowed by ahkpm.json
+lead: Update package(s) to the latest version allowed by ahkpm.json
 menu:
   docs:
     parent: "commands"
@@ -8,7 +9,9 @@ toc: true
 ---
 ## Synopsis
 
-Updates package(s) to the latest version allowed by ahkpm.json.
+Updates the specified package(s), by checking `ahkpm.json`, determining the
+latest version allowed by the version range listed there, and downloading it
+to `ahkpm-modules`.
 
 For example, if you have a dependency on `github.com/user/repo` with version
 `branch:main`, running `ahkpm update github.com/user/repo` will update the
@@ -16,23 +19,16 @@ package to the latest commit on the main branch.
 
 You may also use package name shorthands, such as `gh:user/repo`.
 
-```
-ahkpm update <packageName>... [flags]
+## Usage
+
+```text
+ahkpm update <packageName>...
 ```
 
 ## Examples
 
+```text
+ahkpm update github.com/joshuacc/fake-package
+ahkpm update gh:joshuacc/fake-package
 ```
-ahkpm update github.com/joshuacc/mock-ahkpm-package-a
-```
-
-## Options
-
-```
-  -h, --help   help for update
-```
-
-## See also:
-
-* [ahkpm](ahkpm.md)	 - The package manager for AutoHotkey
 
