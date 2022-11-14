@@ -1,0 +1,7 @@
+{{ $latestRelease := getJSON "https://api.github.com/repos/joshuacc/ahkpm/releases/latest" }}
+{{ $assets := $latestRelease.assets }}
+{{ range $assets }}
+  {{ if eq .name (printf "ahkpm-%s.msi" $latestRelease.name) }}
+    {{ .browser_download_url }}
+  {{ end }}
+{{ end }}

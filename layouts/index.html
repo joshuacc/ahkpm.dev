@@ -1,6 +1,5 @@
 {{ define "main" }}
-{{ $data := getJSON "https://api.github.com/repos/joshuacc/ahkpm/releases" }}
-{{ $mostRecentRelease := index $data 0 }}
+{{ $latestRelease := getJSON "https://api.github.com/repos/joshuacc/ahkpm/releases/latest" }}
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
     <div class="col-lg-12 text-center">
@@ -9,7 +8,7 @@
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/overview/introduction/" role="button">Get Started</a>
-      <p class="meta">Open-source MIT Licensed. <a href="{{ $mostRecentRelease.html_url }}">GitHub v{{ $mostRecentRelease.name }}</a></p>
+      <p class="meta">Open-source MIT Licensed. <a href="{{ $latestRelease.html_url }}">GitHub v{{ $latestRelease.name }}</a></p>
     </div>
   </div>
 </section>

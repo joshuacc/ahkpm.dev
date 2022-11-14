@@ -19,11 +19,8 @@ toc: true
 
 ## Installation
 
-To install ahkpm:
-
-1. Go to the [releases][releases] page and find the most recent version.
-2. Download the `ahkpm-{version}.msi` file.
-3. Open it on your Windows machine to launch the ahkpm installer.
+1. [Download the ahkpm installer]({{<download-latest-msi-url>}}).
+2. Run the installer.
 
 ## Basic usage
 
@@ -47,8 +44,6 @@ ahkpm is being actively developed, but it is still a young project.
 As a result it has the following limitations.
 
 - It only supports hosting and downloading of packages on GitHub, though other git hosts will be supported in the future.
-- It doesn't (yet) support specifying version ranges as you can in npm and other package managers.
-- The lockfile only guides installations [when top-level dependencies haven't changed](https://github.com/joshuacc/ahkpm/issues/75).
 
 If you'd like to help remedy these limitations, consider [contributing][github]!
 
