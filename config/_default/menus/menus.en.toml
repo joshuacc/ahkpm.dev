@@ -1,13 +1,18 @@
+[[main]]
+  name = "Docs"
+  url = "/docs/overview/introduction/"
+  weight = 10
+
+[[main]]
+  name = "Packages"
+  url = "/packages/"
+  weight = 20
+
 [[docs]]
   name = "Overview"
   weight = 0
   identifier = "overview"
   url = "/docs/overview/"
-
-[[main]]
-  name = "Docs"
-  url = "/docs/overview/introduction/"
-  weight = 10
 
 [[docs]]
   name = "Advanced"
