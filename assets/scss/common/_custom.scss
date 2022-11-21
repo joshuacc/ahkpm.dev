@@ -1,1 +1,22 @@
 /** Custom styles */
+
+main p a {
+  text-decoration: underline;
+}
+
+.alert .btn {
+  text-decoration: none;
+}
+
+.alert>p:last-child {
+  margin-bottom: 0;
+}
+
+.alert>:first-child {
+  margin-top: 0;
+}
+
+.alert {
+  font-family: inherit;
+  font-size: 1rem;
+}

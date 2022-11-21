@@ -7,7 +7,13 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/overview/introduction/" role="button">Get Started</a>
+      {{ range $latestRelease.assets }}
+        {{ if eq .name (printf "ahkpm-%s.msi" $latestRelease.name) }}
+          <a class="btn btn-outline-primary btn-lg px-4 mb-2" href="{{ .browser_download_url }}" role="button">Download</a>
+        {{ end }}
+      {{ end }}
+
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/overview/introduction/" role="button">Learn More</a>
       <p class="meta">Open-source MIT Licensed. <a href="{{ $latestRelease.html_url }}">GitHub v{{ $latestRelease.name }}</a></p>
     </div>
   </div>
