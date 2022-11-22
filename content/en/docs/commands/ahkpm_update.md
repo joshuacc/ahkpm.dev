@@ -22,7 +22,7 @@ You may also use package name shorthands, such as `gh:user/repo`.
 ## Usage
 
 ```text
-ahkpm update <packageName>...
+ahkpm update <packageName>... [flags]
 ```
 
 ## Examples
@@ -31,4 +31,11 @@ ahkpm update <packageName>...
 ahkpm update github.com/joshuacc/fake-package
 ahkpm update gh:joshuacc/fake-package
 ```
+
+## Options
+
+- `--all`, `-a`: Updates all dependencies
+## Aliases
+
+`u`
 

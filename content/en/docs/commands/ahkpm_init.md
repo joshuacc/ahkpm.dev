@@ -18,6 +18,9 @@ create an `ahkpm.json` file in the current directory.
 ## Usage
 
 ```text
-ahkpm init
+ahkpm init [flags]
 ```
 
+## Options
+
+- `--defaults`, `-d`: Create a an ahkpm.json file with default values. No prompts.
