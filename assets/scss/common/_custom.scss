@@ -20,3 +20,8 @@ main p a {
   font-family: inherit;
   font-size: 1rem;
 }
+
+div.list-unstyled ul {
+  padding-left: 0;
+  list-style: none;
+}

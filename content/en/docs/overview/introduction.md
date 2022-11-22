@@ -175,10 +175,81 @@ big blob of JSON describing the GitHub user profile of joshuacc. (That's me!)
 
 <div class="alert alert-success">
 
-  #### Congratulations!
+  #### Package installed!
 
-  You've installed your first package with ahkpm. There's more that ahkpm can
-  do for you, like automatically handling upgrades to newer versions of packages,
-  but you now know enough for ahkpm to be useful.
+  You've installed your first package with ahkpm. That's enough to be useful,
+  but it's in the ongoing maintenance that ahkpm really saves time.
 
 </div>
+
+## Updating a package
+
+Suppose that the package we are using is updated with either new features or
+bug fixes. If we had manually downloaded this code, then in order to get those
+new features and fixes, we'd need to do the following:
+
+1. Visit the website for the package
+2. Check to see if there are any changes since we originally downloaded it.
+   (Hopefully the authors keep good records!)
+3. Manually download the updated version
+4. Manually verify that the changes are compatible with our existing script
+
+But with ahkpm, we run one simple command to do most of that work:
+
+- `ahkpm update gh:joshuacc/simple-http`
+
+This automatically checks to see if there are new versions of the package which
+match the version range in `ahkpm.json`. In this case it is, `^1.0.0`, which
+means "at least `1.0.0` and less than `2.0.0`." If there is a new matching
+version, ahkpm will automatically download it.
+
+And thanks to the fact that our version range doesn't allow going all the way up
+to `2.0.0`, we can be fairly confident that updating won't break anything.
+
+<aside class="alert alert-info">
+
+#### About versions and ranges
+
+ahkpm primarily relies on a versioning scheme called semantic versioning, which
+is widely used in software development. Any time a package changes in a way that
+is not backwards-compatible, it bumps the major version (the first number).
+
+This means that updating is much safer than it would be otherwise, and can be
+mostly (or entirely) automated.
+
+<!-- TODO: For more see versions page and version ranges page -->
+
+</aside>
+
+#### What about updating further?
+
+You may be wondering, "What about if I actually do want to update to a version
+outside of that range?"
+
+That is also easy to do. You would just run a command like the following:
+
+- `ahkpm install gh:joshuacc/simple-http@2`.
+
+The `@2` specifies that you want to install the latest version within the
+`2.x.x` range. Assuming that there is a matching version available, ahkpm will
+install it for you.
+
+
+## You did it!
+
+In this introduction, you've learned:
+
+<div class="list-unstyled">
+
+- ✅ What packages and package managers are
+- ✅ How to set up your project to use ahkpm
+- ✅ How to install a package for your project
+- ✅ How to use a package in your AutoHotkey scripts
+- ✅ How to update a package to get the latest features and bug fixes
+
+</div>
+
+**You're all set to start using ahkpm on your projects and save a ton of time
+going forward.**
+
+<!-- TODO: Link to concepts -->
