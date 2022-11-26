@@ -215,9 +215,8 @@ is widely used in software development. Any time a package changes in a way that
 is not backwards-compatible, it bumps the major version (the first number).
 
 This means that updating is much safer than it would be otherwise, and can be
-mostly (or entirely) automated.
-
-<!-- TODO: For more see versions page and version ranges page -->
+mostly (or entirely) automated. For more, see the documentation on
+[versions in ahkpm][versions].
 
 </aside>
 
@@ -253,3 +252,5 @@ In this introduction, you've learned:
 going forward.**
 
 <!-- TODO: Link to concepts -->
+
+[versions]:/docs/concepts/versions/
