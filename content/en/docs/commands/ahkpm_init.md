@@ -23,4 +23,4 @@ ahkpm init [flags]
 
 ## Options
 
-- `--defaults`, `-d`: Create a an ahkpm.json file with default values. No prompts.
+- `--defaults`, `-d`: Create an ahkpm.json file with default values. No prompts.
