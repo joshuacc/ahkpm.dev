@@ -51,10 +51,11 @@ On your library's GitHub repository, click the gear icon next to the "About" hea
 
 ![Screenshot highlighting where to find the correct gear icon](about-gear.png)
 
-In the dialog box that appears, add the topic `ahkpm-package`, then click the
-"Save changes" button.
+In the dialog box that appears, add the topic `ahkpm-package`, as well as a
+brief description of the package, then click the "Save changes" button.
 
 ![Screenshot showing how to add the `ahkpm-package` topic](add-topic.png)
 
 After adding the `ahkpm-package` topic, your package is findable via `ahkpm search`.
-And sometime in the next 24 hours, it will also show up on the [Packages page](/packages).
+And sometime in the next 24 hours, it will also show up on the [Packages page](/packages),
+using the description you provided.
